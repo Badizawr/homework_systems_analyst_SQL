@@ -7,3 +7,7 @@ ALTER TABLE students
 ADD COLUMN IF NOT EXISTS exam_score INTEGER;
 ALTER TABLE students 
 ADD COLUMN IF NOT EXISTS direction VARCHAR(100);
+
+
+ALTER TABLE students 
+ADD COLUMN IF NOT EXISTS direction_id INTEGER REFERENCES directions(id);
